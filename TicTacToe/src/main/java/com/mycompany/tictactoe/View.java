@@ -1,5 +1,5 @@
 package com.mycompany.tictactoe;
-
+import javax.swing.JButton;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -159,42 +159,87 @@ public class View extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    boolean whoseTurn = false;
+
     private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
 
     System.out.println("Clicked!");
+
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+if (whoseTurn = false) {
+    whoseTurn = true;
+} else {
+    whoseTurn = false;
+}
+
 
     }//GEN-LAST:event_onClick
 
     private void jButton2onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2onClick
     System.out.println("Clicked!");
+    
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton2onClick
 
     private void jButton3onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton3onClick
 
     private void jButton4onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton4onClick
 
     private void jButton5onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton5onClick
 
     private void jButton6onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton6onClick
 
     private void jButton7onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton7onClick
 
     private void jButton8onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton8onClick
 
     private void jButton9onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9onClick
     System.out.println("Clicked!");
+JButton button = (JButton)evt.getSource();
+String player = (this.whoseTurn) ? "X" : "O";
+button.setText(player);
+whoseTurn = true;
     }//GEN-LAST:event_jButton9onClick
 
 
