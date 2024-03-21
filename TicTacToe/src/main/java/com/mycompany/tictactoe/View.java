@@ -169,13 +169,12 @@ public class View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     boolean whoseTurn = false;
-    boolean winner = 
     private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
     JButton button = (JButton)evt.getSource();
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
-      
+      String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
       }
@@ -189,13 +188,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
-      
+      String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
       }
       this.whoseTurn = !this.whoseTurn;
     }
-    
     }//GEN-LAST:event_jButton2onClick
 
     private void jButton3onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3onClick
@@ -203,9 +201,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton3onClick
 
     private void jButton4onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4onClick
@@ -213,9 +214,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton4onClick
 
     private void jButton5onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5onClick
@@ -223,9 +227,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton5onClick
 
     private void jButton6onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6onClick
@@ -233,9 +240,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton6onClick
 
     private void jButton7onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7onClick
@@ -243,9 +253,12 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton7onClick
 
     private void jButton8onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8onClick
@@ -253,19 +266,25 @@ public class View extends javax.swing.JFrame {
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton8onClick
 
     private void jButton9onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9onClick
-    JButton button = (JButton)evt.getSource();
+   JButton button = (JButton)evt.getSource();
     if (button.getText().equals("")) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
+      String winner = this.isWinner();
+      if (!winner.equals("")) {
+          jLabel1.setText(winner+" Wins the game!");
+      }
       this.whoseTurn = !this.whoseTurn;
     }
-
     }//GEN-LAST:event_jButton9onClick
 
 private String isWinner() {
