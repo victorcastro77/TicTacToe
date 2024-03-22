@@ -27,6 +27,7 @@ public class View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jProgressBar1 = new javax.swing.JProgressBar();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -307,16 +308,16 @@ private String isWinner() {
 
   // Check the rows and columns for a tic tac toe
   for (int i=0; i<3; i++) {
-    if (status[i][0].equals(status[i][1]) && status[i][0].equals(status[i][2]))
+    if (!status[i][0].isEmpty() && status[i][0].equals(status[i][1]) && status[i][0].equals(status[i][2]))
       return status[i][0];
-    if (status[0][i].equals(status[1][i]) && status[0][i].equals(status[2][i]))
+    if (!status[0][i].isEmpty() && status[0][i].equals(status[1][i]) && status[0][i].equals(status[2][i]))
       return status[0][i];
   }
-
+  
   // Check the diagonals
-  if (status[0][0].equals(status[1][1]) && status[0][0].equals(status[2][2]))
+  if (!status[0][0].isEmpty() && status[0][0].equals(status[1][1]) && status[0][0].equals(status[2][2]))
     return status[0][0];
-  if (status[0][2].equals(status[1][1]) && status[0][2].equals(status[2][0]))
+  if (!status[0][2].isEmpty() && status[0][2].equals(status[1][1]) && status[0][2].equals(status[2][0]))
     return status[0][2];
 
   // If we haven't found it, then return a blank string
@@ -370,5 +371,6 @@ private String isWinner() {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }
