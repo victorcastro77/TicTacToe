@@ -67,7 +67,7 @@ public class View extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4onClick(evt);
+                onClick(evt);
             }
         });
 
@@ -115,9 +115,8 @@ public class View extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,11 +152,11 @@ public class View extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -168,30 +167,17 @@ public class View extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    boolean gameOver = false;
     boolean whoseTurn = false;
-    private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
-    JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
-      String player = (this.whoseTurn) ? "X" : "O";
-      button.setText(player);
-      String winner = this.isWinner();
-      if (!winner.equals("")) {
-          jLabel1.setText(winner+" Wins the game!");
-      }
-      this.whoseTurn = !this.whoseTurn;
-    }
-    
-    }//GEN-LAST:event_onClick
-
     private void jButton2onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
@@ -199,38 +185,41 @@ public class View extends javax.swing.JFrame {
 
     private void jButton3onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
     }//GEN-LAST:event_jButton3onClick
 
-    private void jButton4onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4onClick
+    private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
-    }//GEN-LAST:event_jButton4onClick
+    }//GEN-LAST:event_onClick
 
     private void jButton5onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
@@ -238,12 +227,13 @@ public class View extends javax.swing.JFrame {
 
     private void jButton6onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
@@ -251,12 +241,13 @@ public class View extends javax.swing.JFrame {
 
     private void jButton7onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
@@ -264,12 +255,13 @@ public class View extends javax.swing.JFrame {
 
     private void jButton8onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8onClick
     JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
@@ -277,12 +269,13 @@ public class View extends javax.swing.JFrame {
 
     private void jButton9onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9onClick
    JButton button = (JButton)evt.getSource();
-    if (button.getText().equals("")) {
+    if (button.getText().equals("") && !this.gameOver) {
       String player = (this.whoseTurn) ? "X" : "O";
       button.setText(player);
       String winner = this.isWinner();
       if (!winner.equals("")) {
           jLabel1.setText(winner+" Wins the game!");
+          this.gameOver = true;
       }
       this.whoseTurn = !this.whoseTurn;
     }
